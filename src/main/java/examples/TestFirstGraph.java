@@ -15,7 +15,7 @@ public class TestFirstGraph {
 		graph.addNode("C");
 		graph.addEdge("AB", "A", "B");
 		graph.addEdge("AC", "A", "C");
-		graph.addEdge("BC", "B", "C");
+		
 		graph.display();
 		
 	}	
