@@ -40,7 +40,7 @@ public class BinaryTree {
 		if (nodotoDelete != null) {
 			log("Nodo to delete does not exists");
 		} else {
-			parent.
+			//parent.
 		}
 		
 	}
