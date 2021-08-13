@@ -3,7 +3,7 @@ package excersices.javarevisted;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Ex4_PolindromeInteger {
+public class Ex04_PolindromeInteger {
 	
 	private static boolean polindromeNumber(int number) {
         boolean result = true;

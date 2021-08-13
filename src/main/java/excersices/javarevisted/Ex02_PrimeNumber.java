@@ -1,6 +1,6 @@
 package excersices.javarevisted;
 
-public class Ex2_PrimeNumber {
+public class Ex02_PrimeNumber {
     
     public static void main(String[] args) {
         System.out.println(isPrime(97));    

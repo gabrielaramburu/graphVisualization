@@ -1,7 +1,7 @@
 package excersices.javarevisted;
 import java.util.*;
 
-public class Ex8_ReverseString {
+public class Ex08_ReverseString {
 	public static void main(String[] args) {
 		char[] s = {'h', 'o', 'l', 'a'};
 		reverseString(s);

@@ -1,6 +1,6 @@
 package excersices.javarevisted;
 
-public class Ex5_ArmstrongNumber {
+public class Ex05_ArmstrongNumber {
 	// 153 is true = 1^3 + 5^3 + 3^3 = 153
 
 	public static void main(String[] args) {

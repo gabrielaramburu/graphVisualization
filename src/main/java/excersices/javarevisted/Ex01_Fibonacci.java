@@ -1,6 +1,6 @@
 package excersices.javarevisted;
 
-public class Ex1_Fibonacci {
+public class Ex01_Fibonacci {
 	// 1, 1, 2, 3, 5, 8, 13, .....
 	public static void main(String[] args) {
 		System.out.println("Result recursion:" + fibonacciRec(13));

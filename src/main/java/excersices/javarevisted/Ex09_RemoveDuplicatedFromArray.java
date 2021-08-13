@@ -9,7 +9,7 @@ import java.util.Map;
  * no duplicate element present, in the same order as input.
  *
  */
-public class Ex9_RemoveDuplicatedFromArray {
+public class Ex09_RemoveDuplicatedFromArray {
 	public int[] removeDuplicate(int A[], int N)
     {
         Map<Integer,Integer> result = new LinkedHashMap<Integer, Integer>();

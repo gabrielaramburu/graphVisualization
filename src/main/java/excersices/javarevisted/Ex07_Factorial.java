@@ -1,6 +1,6 @@
 package excersices.javarevisted;
 
-public class Ex7_Factorial {
+public class Ex07_Factorial {
 	static long factorial(int N) {
 		// return factorialUtil(N, 1L);
 		return factorialIterative(N);
