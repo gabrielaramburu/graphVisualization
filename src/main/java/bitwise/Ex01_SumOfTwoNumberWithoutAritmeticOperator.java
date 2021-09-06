@@ -4,8 +4,9 @@ public class Ex01_SumOfTwoNumberWithoutAritmeticOperator {
     public static void main(String args[]) {
       int a = Integer.valueOf(args[0]);
       int b = Integer.valueOf(args[1]);
-      //int result = rippleCarryAdder(a, b);
-      int result = adder(a, b);
+      int result = rippleCarryAdder(a, b);
+      //int result = adder(a, b);
+      System.out.println("");
       System.out.println("Adding " + a + " and " + b + " = " + result);
     }
 
@@ -15,29 +16,37 @@ public class Ex01_SumOfTwoNumberWithoutAritmeticOperator {
         //the same operation as a halfAdder
         carry = a & b;
         a = a ^ b;
-
+        System.out.println(a);
         //this part a very unintuitive
         b = carry<<1;
       }
       return a;
     }
 
-    //does not work
-    public static int rippleCarryAdder(int a, int b){
-        int aux = 1;
-        int carryIn = 0;
-        for (int i = aux;i > 0; i = i << 1) {
 
-          AdderResult res = fullAdder(a & i, b & i, carryIn);
+    public static int rippleCarryAdder(int a, int b){
+        StringBuilder sb = new StringBuilder();
+        int carryIn = 0;
+        int result = 0;
+
+        String binA = toBinary(a);
+        String binB = toBinary(b);
+
+        for (int i = binA.length() - 1 ;i >=0; i--) {
+          AdderResult res = fullAdder(
+            Character.getNumericValue(binA.charAt(i)),
+            Character.getNumericValue(binB.charAt(i)), carryIn);
+
           carryIn = res.carryOut;
-          System.out.print(res.result);
+          result = res.result;
+          sb.append(Integer.toBinaryString(result));
         }
-        return 0;
+        System.out.println(sb.reverse().toString());
+        return Integer.parseInt(sb.toString(), 2);
     }
 
     //Simulation of FullAdder
     public static AdderResult fullAdder(int a, int b, int carryIn) {
-
 
       AdderResult res1 = halfAdder(a, b);
       AdderResult res2 = halfAdder(res1.result, carryIn);
@@ -45,6 +54,14 @@ public class Ex01_SumOfTwoNumberWithoutAritmeticOperator {
 
       //System.out.println("a " + a + " b " + b + " cIn " + carryIn + " cOut " + carryOut + " result " + res2.result);
       return new AdderResult(res2.result, carryOut);
+    }
+
+    public static String toBinary(int a) {
+          String aux = Integer.toBinaryString(a);
+          aux = "00000000000000000000000000000000"+aux;
+          aux = aux.substring(aux.length() - 32, aux.length());
+          //System.out.println(a + " = " + aux);
+          return aux;
     }
 
     public static AdderResult halfAdder(int a, int b) {
