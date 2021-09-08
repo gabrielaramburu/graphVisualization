@@ -9,6 +9,7 @@ public class Ex08_TurnOffKthBitOnNumber {
 			+ Integer.toBinaryString(num));
 
 		num = num & ~ (1 << (k - 1));
+		//num = num | (1 << (k -1)); this is for turn ON
 		System.out.println("After turn off the " + k + " digit, the number is "  +
 			Integer.toBinaryString(num));
 
