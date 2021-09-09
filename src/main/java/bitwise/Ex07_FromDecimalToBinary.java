@@ -1,6 +1,7 @@
 package bitwise;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Ex07_FromDecimalToBinary {
 
@@ -15,6 +16,8 @@ public class Ex07_FromDecimalToBinary {
 		  	stack.addFirst(aux);
 		  	y = y<<1;
   		}
-  		System.out.println(stack.toString());
+  		System.out.println(
+	  		stack.stream().map(i -> i+"").collect(Collectors.joining())
+	  		);
 	}
 }
