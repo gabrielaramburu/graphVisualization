@@ -27,6 +27,9 @@ public class Inventory {
 		
 		//A better approach is to consider the method as a first-class citizen. 
 		System.out.println("Red apples:" + grocery.filterApplesUsingMethodReference(Apple::isRed));
+		
+		//Even better could be to use an anonymous function or lambda expresion.
+		System.out.println("Apples bigger than 30g " + grocery.filterApplesUsingMethodReference((Apple a) -> a.weight > 30));
 	}
 
 }
