@@ -1,3 +1,5 @@
+package excersices.javarevisted2022;
+
 public class Ex6_AvoidDeadLock {
 	public static Object lock1 = new Object();
 	public static Object lock2 = new Object();

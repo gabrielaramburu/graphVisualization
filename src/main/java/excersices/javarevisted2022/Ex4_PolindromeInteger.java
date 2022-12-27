@@ -1,3 +1,5 @@
+package excersices.javarevisted2022;
+
 import java.util.*;
 public class Ex4_PolindromeInteger {
 	public static void main (String[] args) {

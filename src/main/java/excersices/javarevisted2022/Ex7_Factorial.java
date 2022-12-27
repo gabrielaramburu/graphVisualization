@@ -1,3 +1,5 @@
+package excersices.javarevisted2022;
+
 public class Ex7_Factorial 
 	{
 	static int total = 0;

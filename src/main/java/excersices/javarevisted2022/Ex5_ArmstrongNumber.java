@@ -1,3 +1,5 @@
+package excersices.javarevisted2022;
+
 public class Ex5_ArmstrongNumber {
 	public static void main(String[] args) {
 		int number = Integer.valueOf(args[0]);

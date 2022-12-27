@@ -1,3 +1,5 @@
+package excersices.javarevisted2022;
+
 
 public class ex1_Fibonacci {
 	private int total;

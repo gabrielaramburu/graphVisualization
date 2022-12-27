@@ -1,3 +1,5 @@
+package excersices.javarevisted2022;
+
 public class Ex2_PrimeNumbers {
 	public static void main(String[] args) {
 		

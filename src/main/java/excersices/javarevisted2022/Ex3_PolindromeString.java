@@ -1,3 +1,5 @@
+package excersices.javarevisted2022;
+
 public class Ex3_PolindromeString {
 	public static void main(String[] args){
 		Ex3_PolindromeString ex3 = new Ex3_PolindromeString();
