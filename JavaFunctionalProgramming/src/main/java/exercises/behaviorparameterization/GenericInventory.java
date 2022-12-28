@@ -1,4 +1,4 @@
-package exercises.methodreference;
+package exercises.behaviorparameterization;
 
 import java.util.ArrayList;
 import java.util.Arrays;

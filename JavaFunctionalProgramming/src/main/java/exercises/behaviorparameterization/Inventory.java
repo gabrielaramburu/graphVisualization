@@ -1,11 +1,11 @@
-package exercises.methodreference;
+package exercises.behaviorparameterization;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
-import exercises.methodreference.Apple.Color;
+import exercises.behaviorparameterization.Apple.Color;
 
 public class Inventory {
 
