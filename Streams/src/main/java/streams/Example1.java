@@ -1,14 +1,19 @@
 package streams;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * The way we use streams is more declarative than the way we use Collection (imperative)
+ * It also allows us to form a chain of responsability.
+ * It also use implicit iteration (vs explicit iteration used by Collections"
+ *
+ */
 public class Example1 {
 	public static void main(String[] args) {
 		//get 3 names of dishes with more than 300 calories.
 		List<String> filteredDishes = 
-				getListOfDishes().stream()
+				Dish.getListOfDishes().stream()
 					.filter(dish -> dish.getCalories() > 300)
 					.map(Dish::getName)
 					.limit(3)
@@ -17,18 +22,5 @@ public class Example1 {
 		System.out.println(filteredDishes);
 	}
 				
-	public static List<Dish> getListOfDishes() {
-		List<Dish> menu = Arrays.asList(
-				new Dish("pork", false, 800, Dish.Type.MEAT),
-				new Dish("beef", false, 700, Dish.Type.MEAT),
-				new Dish("chicken", false, 400, Dish.Type.MEAT),
-				new Dish("french fries", true, 530, Dish.Type.OTHER),
-				new Dish("rice", true, 350, Dish.Type.OTHER),
-				new Dish("season fruit", true, 120, Dish.Type.OTHER),
-				new Dish("pizza", true, 550, Dish.Type.OTHER),
-				new Dish("prawns", false, 300, Dish.Type.FISH),
-				new Dish("salmon", false, 450, Dish.Type.FISH) );
-		
-		return menu;
-	}
+	
 }
