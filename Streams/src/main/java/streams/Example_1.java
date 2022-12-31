@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
  * It also use implicit iteration (vs explicit iteration used by Collections"
  *
  */
-public class Example1 {
+public class Example_1 {
 	public static void main(String[] args) {
 		//get 3 names of dishes with more than 300 calories.
 		List<String> filteredDishes = 
