@@ -1,4 +1,4 @@
-package filtering;
+package streams.filtering;
 
 import streams.Dish;
 
