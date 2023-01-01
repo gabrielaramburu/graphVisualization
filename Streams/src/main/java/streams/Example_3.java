@@ -1,5 +1,6 @@
 package streams;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -9,13 +10,15 @@ import java.util.stream.Collectors;
 public class Example_3 {
 
 	public static void main(String[] args) {
-		Dish.getListOfDishes().stream()
+		List<String> dishes = Dish.getListOfDishes().stream()
 			.filter(dish ->{ 
 							System.out.println("Filtering dish: " + dish.getName());
-							return true;})
+							return dish.getCalories() > 300;})
 				.map(dish -> {System.out.println("Mapping dish:" + dish.getName());
 						return dish.getName();})
 				.collect(Collectors.toList());
+		
+		System.out.println(dishes);
 		
 		/* Partial out put:
 		 * 

@@ -1,6 +1,7 @@
 package streams;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 import lombok.Getter;
@@ -38,6 +39,13 @@ public class Dish {
 		
 		return menu;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Dish [name=" + name + ", vegetarean=" + vegetarean + ", calories=" + calories + ", type=" + type + "]";
+	}
+	
 	
 	
 }
