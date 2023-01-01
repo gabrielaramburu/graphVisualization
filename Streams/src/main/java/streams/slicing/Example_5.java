@@ -19,12 +19,13 @@ Dish [name=beef, vegetarean=false, calories=700, type=MEAT]
 Dish [name=pork, vegetarean=false, calories=800, type=MEAT]
 	 */
 	public final static void main (String[] args) {
+		//takeWhile and dropWhile only work with sorted streams.
 		
 		exampleOfTakeWhile("Example A of takeWhile", buildAscSortedStream(), dish -> dish.getCalories() < 450);
 		exampleOfTakeWhile("Example B of takeWhile", buildAscSortedStream(), dish -> dish.getCalories() > 450); //it shows anything
 		
 		exampleOfDropWhile("Example A of dropWhile", buildAscSortedStream(), dish -> dish.getCalories() < 700);
-		exampleOfDropWhile("Example B of dropWhile", buildAscSortedStream(), dish -> dish.getCalories() > 700); //it shows anything
+		exampleOfDropWhile("Example B of dropWhile", buildAscSortedStream(), dish -> dish.getCalories() > 700); //it shows all the elements
 		
 		//it is very important to understand why the B examples doesn't show anything. Remember takewhie and dropwhile are not filters,
 		//are slicers that improve the processing performance
