@@ -1,14 +1,16 @@
 package streams;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
 
 import lombok.Getter;
+import streams.Dish.CaloriesLevel;
 
 @Getter
 public class Dish {
 	public enum Type {MEAT, FISH, OTHER}; 
+	public enum CaloriesLevel  {NORMAL, FAT, DIET};
 	
 	private final String name;
 	private final boolean vegetarean;
@@ -46,6 +48,10 @@ public class Dish {
 		return "Dish [name=" + name + ", vegetarean=" + vegetarean + ", calories=" + calories + ", type=" + type + "]";
 	}
 	
+	public CaloriesLevel getCaloriesLevel()  { 
+		if (this.getCalories() < 400) return CaloriesLevel.DIET;
+		else if (this.getCalories() < 700) return CaloriesLevel.NORMAL;
+		else return CaloriesLevel.FAT;};
 	
 	
 }

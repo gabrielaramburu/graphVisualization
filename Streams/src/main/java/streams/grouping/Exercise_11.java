@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import streams.Dish;
+import streams.Dish.CaloriesLevel;
 import streams.Dish.Type;
 
 public class Exercise_11 {
@@ -12,9 +13,14 @@ public class Exercise_11 {
 	public static void main(String[] args) {
 		groupingDishesByType();
 		groupingByCaloriesRange();
+		groupingByCaloriesRangeImproved();
 		
 		groupinDishesByTypeFilteringByCalories();
 	}
+
+
+
+	
 
 
 
@@ -46,7 +52,7 @@ public class Exercise_11 {
 	 * set to “normal” the dishes having between 400 and 700 calories, 
 	 * and set to “fat” the ones with more than 700 calories.
 	 */
-	enum CaloriesLevel  {NORMAL, FAT, DIET};
+	
 	private static void groupingByCaloriesRange() {
 		Map<CaloriesLevel, List<Dish>> result = 
 				Dish.getListOfDishes().stream()
@@ -55,6 +61,14 @@ public class Exercise_11 {
 					else if (d.getCalories() < 700) return CaloriesLevel.NORMAL;
 					else return CaloriesLevel.FAT;
 				}));
+		
+		System.out.println(result);
+	}
+	
+	private static void groupingByCaloriesRangeImproved() {
+		Map<CaloriesLevel, List<Dish>> result = 
+				Dish.getListOfDishes().stream()
+					.collect(Collectors.groupingBy(Dish::getCaloriesLevel));
 		
 		System.out.println(result);
 	}
