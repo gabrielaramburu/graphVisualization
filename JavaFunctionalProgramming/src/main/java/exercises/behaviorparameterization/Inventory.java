@@ -25,7 +25,10 @@ public class Inventory {
 		
 		System.out.println("Green apples:"+ greenApples.toString());
 		
-		//A better approach is to consider the method as a first-class citizen. 
+		
+		System.out.println("Red apples:" + grocery.filterApples(a -> a.color.equals(Color.RED)));
+		
+		//A better approach is to consider the method reference
 		System.out.println("Red apples:" + grocery.filterApplesUsingMethodReference(Apple::isRed));
 		
 		//Even better could be to use an anonymous function or lambda expresion.
